@@ -1,2 +1,3 @@
-# acm-icpc
+# ACM-ICPC
+
 ACM-ICPC solved problems.
