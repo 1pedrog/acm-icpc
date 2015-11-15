@@ -10,10 +10,11 @@ The Problem
 -----------
 
 Consider the following algorithm:
+
 1. input *n*
 2. print *n*
 3. if *n* = 1 then STOP
-4. if *n* is odd then **_n_ <- 3_n_ + 1**
+4. if *n* is odd then **_n_ <- 3 _n_ + 1**
 5. else n = **_n_ / 2**
 6. GOTO 2
 
