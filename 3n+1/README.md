@@ -43,22 +43,19 @@ For each pair of input integers *i* and *j* you should output *i*, *j*, and the 
 Sample Input
 ------------
 
+```
 1 10
-
 100 200
-
 201 210
-
 900 1000
+```
 
 Sample Output
 -------------
 
+```
 1 10 20
-
 100 200 125
-
 201 210 89
-
 900 1000 174
-
+```
