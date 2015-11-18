@@ -66,7 +66,7 @@ int main(int argc, char **argv) {
 					c = segment3[d];
 					printChar(c, s);
 					printf(" ");
-				} else if ((i > s + 1) && (i <= (s * 2) + 1)) {
+				} else if (i > s + 1 && i <= (s * 2) + 1) {
 					c = segment4[d];
 					printf("%c", c);
 					printChar(' ', s);
