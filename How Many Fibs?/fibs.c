@@ -80,8 +80,8 @@ void subtract(char *c, char *a, char *b, int *lc, int la, int lb) {
 }
 
 int main(int argc, char **argv) {
-	int i, n, la, lb, lf0, lf1;
-	char a[100], b[100], f0[100], f1[100], aux[100];
+	int i, n, la, lb, lf0, lf1, tmp;
+	char *a, *b, f0[100], f1[100];
 	while (scanf("%s %s", a, b) != EOF) {
 		if (a[0] == b[0] && a[0] == '0') {
 			return 0;
@@ -98,17 +98,15 @@ int main(int argc, char **argv) {
 		}
 		f0[0] = lf0 = lf1 = 1;
 		f1[0] = 2;
-		for (i = 0; i < la; i++) {
-			aux[i] = a[la - i - 1] - 48;
+		for (i = 0; i < la / 2; i++) {
+			tmp = a[i] - 48;
+			a[i] = a[la - i - 1] - 48;
+			a[la - i - 1] = tmp;
 		}
-		for (i = 0; i < la; i++) {
-			a[i] = aux[i];
-		}
-		for (i = 0; i < lb; i++) {
-			aux[i] = b[lb - i - 1] - 48;
-		}
-		for (i = 0; i < lb; i++) {
-			b[i] = aux[i];
+		for (i = 0; i < lb / 2; i++) {
+			tmp = b[i] - 48;
+			b[i] = b[lb - i - 1] - 48;
+			b[lb - i - 1] = tmp;
 		}
 		while (lessThan(f1, a, lf1, la) == 1) {
 			add(f1, f1, f0, &lf1, lf1, lf0);
